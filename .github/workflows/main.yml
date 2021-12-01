@@ -6,8 +6,8 @@ name: CI
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
- # schedule:
-   # - cron: "38 * * * *"
+schedule:
+  - cron: "6 * * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -68,12 +68,12 @@ jobs:
     - name: Pushes test file
       uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
       env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        API_TOKEN_GITHUB: ${{ secrets.aoc_site }}
       with:
         source_file: 'index.html'
-        destination_repo: 'emilwihlander/emilwihlander.github.com'
-        user_email: 'emilwihlander@outlook.com'
-        user_name: 'emilwihlander'
+        destination_repo: 'GitThisJoel/GitThisJoel.github.io'
+        user_email: 'joelbacker10@gmail.com'
+        user_name: 'GitThisJoel'
         destination_branch: 'main'
 
 
