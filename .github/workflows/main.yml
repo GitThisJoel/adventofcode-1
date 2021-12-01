@@ -68,7 +68,7 @@ jobs:
     - name: Pushes test file
       uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
       env:
-        API_TOKEN_GITHUB: ${{ secrets.aoc_site }}
+        API_TOKEN_GITHUB: ${{ aoc_site }}
       with:
         source_file: 'index.html'
         destination_repo: 'GitThisJoel/GitThisJoel.github.io'
