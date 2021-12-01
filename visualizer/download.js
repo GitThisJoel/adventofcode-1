@@ -3,11 +3,11 @@ var https = require('https');
 var fs = require('fs');
 var options = {
     host: 'adventofcode.com',
-    path: '/2020/leaderboard/private/view/380632.json',
+    path: '/2021/leaderboard/private/view/1188101.json',
     method: 'GET',
     headers: {
-        "Cookie": "session=53616c7465645f5f0aa26143183875c778d4c25921bb3b3b74dcf80ccf0361558099be833f649fd2b145acab2e5961b9", // POINTER its unfortunately useless
-        "Set-Cookie": "session=53616c7465645f5f0aa26143183875c778d4c25921bb3b3b74dcf80ccf0361558099be833f649fd2b145acab2e5961b9" // POINTER its unfortunately useless
+        "Cookie": "session=53616c7465645f5f7a91ebb663fcf476b80aa82c1f9c9526ff8407d0d3e2aa86129640c1714d5fc68786d1b3445bc990", // POINTER its unfortunately useless
+        "Set-Cookie": "session=53616c7465645f5f7a91ebb663fcf476b80aa82c1f9c9526ff8407d0d3e2aa86129640c1714d5fc68786d1b3445bc990" // POINTER its unfortunately useless
     }
 };
 
@@ -21,4 +21,3 @@ function downloadJson(urlToPrint){
 }
 
 downloadJson(options)
-
